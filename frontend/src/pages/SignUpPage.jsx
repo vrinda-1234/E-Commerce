@@ -74,19 +74,20 @@ const SignUpPage = () => {
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <Mail className="h-5 w-5 text-gray-400" aria-hidden="true" />
                 </div>
                 <input
                   id="email"
                   type="email"
                   required
+                  autoComplete="off"
                   value={formData.email}
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
                   className="block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
                   placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-emerald-500 sm:text-sm"
-                  placeholder="Vrony Smith"
+                  placeholder="you@gmail.com"
                 />
               </div>
             </div>
@@ -105,6 +106,7 @@ const SignUpPage = () => {
                   id="password"
                   type="password"
                   required
+                  autoComplete="new-password"
                   value={formData.password}
                   onChange={(e) =>
                     setFormData({ ...formData, password: e.target.value })
